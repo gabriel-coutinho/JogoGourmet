@@ -1,9 +1,13 @@
-package jogo;
+package com.br.jogogourmet.entidades;
 
+/**
+ * Classe Prato que contem informações como nome do prato e alguma caracteristica que o descreva. 
+ * @author gabriel-coutinho
+ *
+ */
 public class Prato {
 	String nome;
 	String descricao;
-	String teste;
 	
 	public Prato() {
 	}
@@ -33,6 +37,15 @@ public class Prato {
 		this.descricao = descricao;
 	}
 
+	
+	/**
+	 * Retorna o nome do prato.
+	 */
+	@Override
+	public String toString() {
+		return this.nome;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -41,6 +54,9 @@ public class Prato {
 		return result;
 	}
 
+	/**
+	 * Baseado na comparação dos nomes dos pratos.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,5 +73,4 @@ public class Prato {
 			return false;
 		return true;
 	}
-	
 }
