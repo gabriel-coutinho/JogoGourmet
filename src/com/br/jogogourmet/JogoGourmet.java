@@ -17,7 +17,9 @@ public class JogoGourmet {
 		NoAB<Prato> raiz = new NoAB<Prato>(new Prato("Lasanha", "Massa"), noEsquerda, new NoAB<Prato>());
 		while (true) {
 			Object[] optionOk = { "OK" };
-		    JOptionPane.showOptionDialog(null, "Pense em um prato que gosta", "Jogo Gourmet", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, optionOk, optionOk[0]);
+		    if(JOptionPane.showOptionDialog(null, "Pense em um prato que gosta", "Jogo Gourmet", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, optionOk, optionOk[0]) == -1) {
+		    	break;
+		    }
 			exec(raiz, raiz.getPrato().toString());
 		}
 	}
